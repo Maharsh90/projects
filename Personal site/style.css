@@ -1,0 +1,28 @@
+img{
+    height: 150px;
+    width: 150px;
+}
+body{
+    background-color:#EAF6F6;
+}
+hr{
+    background-color: white;
+    border-style: none;
+    height: 2px;
+    border-style: dotted none none; /*top left-right bottom*/
+    /*
+    when we specify two values then first style applies to top and bottom,the second to the left & right.
+    when three values are specify first style applies to top,second to the left and right,the third to bottom.
+    when four values are specify then top,right,bottom,left.
+    */
+    width: 5%;
+    height: 0px;
+    border-style: none;
+    border-top-style: dotted;
+    border-color: grey;
+    border-width: 5px;
+}
+
+h1,h3{
+    color: #66BFBF;
+}

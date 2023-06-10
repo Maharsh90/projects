@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- js is require to work some of this components for bootstrap -->
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js">
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap-switch-button@1.1.0/css/bootstrap-switch-button.min.css"
+        rel="stylesheet">
+    <script
+        src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap-switch-button@1.1.0/dist/bootstrap-switch-button.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js">
+    </script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container mt-4">
+        <div class="card mx-auto" style="max-width:400px" id="allborder">
+            <div class="card-header">
+                <!-- bg-dark id="upperbackground"-->
+                <div class="navbar navbar-expand p-0">
+                    <ul class="navbar-nav me-auto align-items-center w-100">
+                        <li class="nav-item">
+                            <a href="#!" class="nav-link">
+                                <div class="position-relative"
+                                    style="width:50px; height: 50px; border-radius: 50%; border: 2px solid #563d7c; padding: 2px">
+                                    <img src="chatbot2.gif" class="img-fluid rounded-circle lg"
+                                        style="width:70px; height: 40px;" alt="">
+                                    <span
+                                        class="position-absolute bottom-0 start-100 translate-middle p-1 bg-success border border-light rounded-circle">
+                                        <span class="visually-hidden">New alerts</span>
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#!" class="nav-link text-light">Stella</a>
+                        </li>
+                        <li class="nav-item d-block ms-auto me-2">
+                            <i class="bi-moon-fill" id="toggleDark"></i>
+
+                        </li>
+                        <li>
+
+                            <div class="action">
+                                <div class="profile" onclick="menuToggle();">
+                                    <img src="girlProfile1.png" alt="img">
+                                </div>
+                                <div class="menu">
+                                    <h3>
+                                        Student Account
+                                        <div>
+                                            GTU College
+                                        </div>
+                                    </h3>
+                                    <ul>
+                                        <li class="nav-item d-block ms-auto me-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                                <path fill-rule="evenodd"
+                                                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                                            </svg>
+                                            <a href="#">My Profile</a>
+                                        </li>
+                                        <li class="material-icons icons-size">
+                                            
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-vector-pen" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M10.646.646a.5.5 0 0 1 .708 0l4 4a.5.5 0 0 1 0 .708l-1.902 1.902-.829 3.313a1.5 1.5 0 0 1-1.024 1.073L1.254 14.746 4.358 4.4A1.5 1.5 0 0 1 5.43 3.377l3.313-.828L10.646.646zm-1.8 2.908-3.173.793a.5.5 0 0 0-.358.342l-2.57 8.565 8.567-2.57a.5.5 0 0 0 .34-.357l.794-3.174-3.6-3.6z"/>
+                                                <path fill-rule="evenodd" d="M2.832 13.228 8 9a1 1 0 1 0-1-1l-4.228 5.168-.026.086.086-.026z"/>
+                                              </svg>
+                                              
+                                            <a href="#">Edit Account</a>
+                                        </li>
+                                        <!-- <li class="nav-item d-block ms-auto me-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-vector-pen" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M10.646.646a.5.5 0 0 1 .708 0l4 4a.5.5 0 0 1 0 .708l-1.902 1.902-.829 3.313a1.5 1.5 0 0 1-1.024 1.073L1.254 14.746 4.358 4.4A1.5 1.5 0 0 1 5.43 3.377l3.313-.828L10.646.646zm-1.8 2.908-3.173.793a.5.5 0 0 0-.358.342l-2.57 8.565 8.567-2.57a.5.5 0 0 0 .34-.357l.794-3.174-3.6-3.6z"/>
+                                                <path fill-rule="evenodd" d="M2.832 13.228 8 9a1 1 0 1 0-1-1l-4.228 5.168-.026.086.086-.026z"/>
+                                              </svg>
+                                            <a href="#">Edit Account</a>
+                                        </li> -->
+                                        <li>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                                                <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
+                                                <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+                                              </svg>
+                                            <a href="#">LOGOUT</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+
+                </div>
+            </div>
+
+
+            <div class="card-body p-4" id="container" style="height: 500px; overflow: auto;">
+                <div class="d-flex align-items-baseline mb-4">
+                    <div class="position-relative avatar mb-1">
+                        <img src="chatbot2.gif" class="img-fluid rounded-circle lg" style="width:70px; height: 40px;"
+                            alt="">
+                        <span
+                            class="position-absolute bottom-0 start-100 translate-middle p-1 bg-success border border-light rounded-circle">
+                            <span class="visually-hidden">New alerts</span>
+                        </span>
+                    </div>
+                    <div class="pe-2">
+                        <div>
+                            <div class="card card-text d-inline-block p-2 px-3 m-1 botui-message-content html">Hii,How
+                                can
+                                I help you today
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex align-items-baseline mb-4">
+                    <div class="position-relative avatar mb-1">
+                        <img src="chatbot2.gif" class="img-fluid rounded-circle lg" style="width:70px; height: 40px;"
+                            alt="">
+                        <span
+                            class="position-absolute bottom-0 start-100 translate-middle p-1 bg-success border border-light rounded-circle">
+                            <span class="visually-hidden">New alerts</span>
+                        </span>
+                    </div>
+                    <div class="pe-2">
+                        <div>
+                            <div class="card card-text d-inline-block p-2 px-3 m-1 botui-actions-buttons disable"
+                                style="display: block;"><span class="action-heading"></span><span
+                                    class="button-wrap"><button type="button" class="btn chatbot_btn botui-actions-buttons-button"
+                                        value="Visitor" id="one">
+                                        <span class="btn1txt">Visitor</span>
+                                    </button>
+                                    <button type="button" class="btn chatbot_btn botui-actions-buttons-button"
+                                     id="two" value="Student">
+                                        <span class="btn2txt">Student</span>
+                                    </button>
+                                    <!-- <button type="button" class="botui-actions-buttons-button">
+                                        <span>Faculty</span>
+                                    </button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-baseline text-end justify-content-end mb-4">
+                    <div class="pe-2">
+                        <div>
+                            <div class="card card-text d-inline-block p-2 px-3 m-1 botui-message-content html">Visitor
+                            </div>
+                        </div>
+                    </div>
+                    <div class="position-relative avatar mb-1">
+                        <img src="girlProfile.png" class="img-fluid rounded-circle lg" style="width:70px; height: 40px;"
+                            alt="">
+                        <span
+                            class="position-absolute bottom-0 start-100 translate-middle p-1 bg-success border border-light rounded-circle">
+                            <span class="visually-hidden">New alerts</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="d-flex align-items-baseline mb-4">
+                    <div class="position-relative avatar mb-1">
+                        <img src="chatbot2.gif" class="img-fluid rounded-circle lg" style="width:70px; height: 40px;"
+                            alt="">
+                        <span
+                            class="position-absolute bottom-0 start-100 translate-middle p-1 bg-success border border-light rounded-circle">
+                            <span class="visually-hidden">New alerts</span>
+                        </span>
+                    </div>
+                    <div class="pe-2">
+                        <div>
+                            <div class="card card-text d-inline-block p-2 px-3 m-1 botui-message-content html">Select
+                                Courses below:
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex align-items-baseline mb-4">
+                    <div class="position-relative avatar mb-1">
+                        <img src="chatbot2.gif" class="img-fluid rounded-circle lg" style="width:70px; height: 40px;"
+                            alt="">
+                        <span
+                            class="position-absolute bottom-0 start-100 translate-middle p-1 bg-success border border-light rounded-circle">
+                            <span class="visually-hidden">New alerts</span>
+                        </span>
+                    </div>
+                    <div class="pe-2">
+                        <div>
+                            <div class="botui-actions-buttons disable card card-text d-inline-block p-2 px-3 m-1"
+                                style="display: block;"><span class="action-heading"></span><span
+                                    class="button-wrap"><button type="button" class="chatbot_btn botui-actions-buttons-button" value="UG">
+                                        <span>UG</span>
+                                    </button>
+                                    <button type="button" class="chatbot_btn botui-actions-buttons-button" value="PG">
+                                        <span>PG</span>
+                                    </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex align-items-baseline text-end justify-content-end mb-4">
+                    <div class="pe-2">
+                        <div>
+                            <div class="card card-text d-inline-block p-2 px-3 m-1 botui-message-content html">UG
+                            </div>
+                        </div>
+                    </div>
+                    <div class="position-relative avatar mb-1">
+                        <img src="girlProfile.png" class="img-fluid rounded-circle lg" style="width:70px; height: 40px;"
+                            alt="">
+                        <span
+                            class="position-absolute bottom-0 start-100 translate-middle p-1 bg-success border border-light rounded-circle">
+                            <span class="visually-hidden">New alerts</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-baseline mb-4">
+                    <div class="position-relative avatar mb-1">
+                        <img src="chatbot2.gif" class="img-fluid rounded-circle lg" style="width:70px; height: 40px;"
+                            alt="">
+                        <span
+                            class="position-absolute bottom-0 start-100 translate-middle p-1 bg-success border border-light rounded-circle">
+                            <span class="visually-hidden">New alerts</span>
+                        </span>
+                    </div>
+                    <div class="pe-2">
+                        <div>
+                            <div class="botui-actions-buttons disable card card-text d-inline-block p-2 px-3 m-1"
+                                style="display: block;"><span class="action-heading"></span><span
+                                    class="button-wrap"><button type="button" class="chatbot_btn botui-actions-buttons-button" value="APPLIED MECHANICS">
+                                        <span>APPLIED MECHANICS</span>
+                                    </button>
+                                    <button type="button" class="chatbot_btn botui-actions-buttons-button" value="CIVIL ENGG.">
+                                        <span>CIVIL ENGG.</span>
+                                    </button>
+                                    <button type="button" class="botui-actions-buttons-button" style="display: none;">
+                                        <!---->
+                                        <!----><span>Animation</span>
+                                    </button><a onclick="showAllRecommendations();"
+                                        class="showmore-link botui-actions-buttons-button">+8 more</a><button
+                                        type="button" class="botui-actions-buttons-button" style="display: none;">
+                                        <!---->
+                                        <!----><span>Mass Communication &amp; Media</span>
+                                    </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex align-items-baseline text-end justify-content-end mb-4">
+                    <div class="pe-2">
+                        <div>
+                            <div class="card card-text d-inline-block p-2 px-3 m-1 botui-message-content html">CIVIL
+                                ENGG.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="position-relative avatar mb-1">
+                        <img src="girlProfile.png" class="img-fluid rounded-circle lg" style="width:70px; height: 40px;"
+                            alt="">
+                        <span
+                            class="position-absolute bottom-0 start-100 translate-middle p-1 bg-success border border-light rounded-circle">
+                            <span class="visually-hidden">New alerts</span>
+                        </span>
+                    </div>
+                </div>
+
+
+                <div class="d-flex align-items-baseline mb-4">
+                    <div class="position-relative avatar mb-1">
+                        <img src="chatbot2.gif" class="img-fluid rounded-circle lg" style="width:70px; height: 40px;"
+                            alt="">
+                        <span
+                            class="position-absolute bottom-0 start-100 translate-middle p-1 bg-success border border-light rounded-circle">
+                            <span class="visually-hidden">New alerts</span>
+                        </span>
+                    </div>
+                    <div class="pe-2">
+                        <div>
+                            <div class="card card-text d-inline-block p-2 px-3 m-1 botui-message-content html">
+                                <center><b>CIVIL ENGINEERING</b></center>
+
+                                <b><i><u>ABOUT DEPARTMENT</u></i></b><br>
+
+                                <b>DURATION:</b> 3 YEARS<br><br>
+
+                                <b>PROGRAM PATTERN:</b> SEMESTER<br><br>
+
+                                <b>TEACHING METHODOLOGY:</b> The program combines classroom teaching and practical
+                                training on-campus.<br><br>
+
+                                <b>AWARD OF DEGREE:</b>
+
+                                Diploma in Civil Engineering will be awarded on successful completion of 3 year program.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="container, scrollbar">
+                    <div class="panel-group">
+                        <div class="card card-text p-2 px-3 m-1 mb-5" id="myScrollspy">
+                            <div class="col" id="accordion">
+                                <div class="progress" style="width:100px; height: 4px;">
+                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 35%"
+                                        aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="card-footer position-absolute w-100 bottom-0 m-0 p-1 foot">
+                <div class="input-group">
+                    <!-- <div class="input-group-text border-0 foot">
+                        <button class="btn btn-outline-light">
+                            <i class="fas fa-paperclip"></i>
+                        </button>
+                    </div> -->
+                    <input type="text" class="form-control border-0 btn bg-light p-2 px-3 m-1 mb-1"
+                        placeholder="Write a message...">
+                    <div class="input-group-text bg-transparent border-0">
+                        <button class="btn btn-outline-light p-2">
+                            <span class="send-button"><svg fill="#FFFFFF" viewBox="0 0 24 24" height="20" width="20"
+                                    class="transition-ease-point-3-s"
+                                    style="vertical-align: middle; margin-left: 10px;">
+                                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
+                                    <path d="M0 0h24v24H0z" fill="none"></path>
+                                </svg></span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

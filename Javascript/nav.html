@@ -1,0 +1,58 @@
+<doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>ieducate</title>
+<style type="text/css">
+	
+</style>
+</head>
+<body>
+	<div id="main">
+		<ul id="nav" class="container">
+		<li>Home</li>
+		<li>About Us</li>
+		<li>Services</li>
+		<li>Testimonial</li>
+		<li>Contact Us</li>
+		</ul>
+	</div>
+	<div class="container">
+		another container
+	</div>
+</body>
+<script type="text/javascript">
+	let d=document.getElementById('main');
+	console.log(d);
+	let n=document.getElementById('nav');
+	console.log(n);
+
+	// change element by id 
+
+	// nav.innerHTML = "<li>Dynamic element</li>"
+   	let containers=document.getElementsByClassName('container');
+	console.log(containers);
+
+// containers[0]
+// <ul id=​"nav" class=​"containers">​…​</ul>​
+// containers[1]
+// <div class=​"containers">​ another container ​</div>​
+		
+
+		//first container returns
+	let sel1 = document.querySelector('.container');
+	console.log("Selector returns", sel1);	
+
+	let sel2 = document.querySelector('#nav');
+	console.log("Selector returns", sel2);
+	//First li return kareta hai
+	let sel3 = document.querySelector('#nav>li');
+	console.log("Selector returns", sel3);
+	//all matching element ko return kareta hai
+	let sel4 = document.querySelectorAll('#nav>li');
+	console.log("Selector returns", sel4);
+//sel3.innerHTML = "inserted";
+console.log(sel3.innerHTML = "inserted");
+</script>
+</html>

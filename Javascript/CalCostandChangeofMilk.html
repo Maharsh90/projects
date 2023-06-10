@@ -1,0 +1,19 @@
+<html>
+
+<head>
+    <title>Test</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function getMilk(money){
+            var numberofbottles = Math.floor(money/1.5); // or Math.round(money/1.5);
+            console.log("buy " + numberofbottles + " bottles of milk");
+
+            return money % 1.5;
+        }
+        var change = getMilk(5);
+        console.log(change);
+    </script>
+</body>
+</html>

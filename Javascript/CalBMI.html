@@ -1,0 +1,17 @@
+<html>
+
+<head>
+    <title>Test</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function bmiCalculator(weight,height){
+            var bmi = weight/(height*height);  //or var bmi = weight/Math.pow(height,2);
+            return Math.round(bmi);
+        }
+        var bmi = bmiCalculator(65, 1.8); 
+        console.log(bmi);
+    </script>
+</body>
+</html>

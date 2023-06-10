@@ -1,0 +1,74 @@
+<doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Event Listener</title>
+<style type="text/css">
+	#para{
+       text-align: center;
+       font-size: 23px;
+       font-family: serif;
+       color:green;
+       word-spacing: 2px;
+	} 
+	.btn{
+       border:2px solid blue;
+       border-radius: 23px;
+       background-color: red;
+       color: white; 
+       cursor: pointer;
+       position:relative;
+       left:680px;
+       font-family: serif;
+       font-size: 20px;
+	}
+	h1 {
+		text-align: center;
+		color:purple;
+	}
+</style>
+</head>
+<body>
+	<div>
+		<h1>This is EventListener example</h1>
+		<p id="para">
+			Hello ma name is maharsh i am studying in st.xaviers college.I am form India ahmedabad
+			Currently i am studying javascript language with codewithharry.com and he is awsome teacher.
+			he taught me a lot about html,css and javascript.
+		</p>
+		<button class="btn" onclick="togglehide()">Show/Hide</button>
+	</div>
+	<script type="text/javascript">
+
+    let para = document.getElementById('para');
+    para.addEventListener('mouseover',function run(){
+           console.log("Mouse now Inside");
+           // alert("MouseInside");
+    });
+
+    para.addEventListener('mouseout',function run(){
+        console.log("Mouse Went outisde");
+    });
+
+		function togglehide(){
+			let btn=document.getElementsByClassName('btn');
+			let para = document.getElementById('para');
+			//you can use without using btn and para because para and btn is a id and class so that you can use directly just for information
+            if(para.style.display != 'none')
+            {
+              para.style.display = 'none';	
+            }
+            else
+            {
+            	para.style.display = 'block';
+            }
+		}
+
+		//Event Listener example
+
+		
+
+	</script>
+</body>
+</html>

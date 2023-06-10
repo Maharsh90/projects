@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>Test</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var GuestList=["M","B","K","S","A","F"];
+        console.log(GuestList);
+        console.log(GuestList.length);
+        console.log(GuestList[0]);
+        var name=prompt("Enter name");
+        if(GuestList.includes(name)){
+            alert("Welcome " + name);
+        }
+        else{
+            alert(name + " not Exist In list");
+        }
+        /*
+        var output = [];
+        output.push(1); //output.push(1) always push the value at the end of an array.
+        output.push(2);
+        output.pop; //it will take the last item & delete that last item.
+        */
+    </script>
+</body>
+</html>

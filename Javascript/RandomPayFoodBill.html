@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>Test</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var output = ["Maharsh", "Krisha", "Bhavin", "Tejal", "Avadhi"];
+        function RandompayFoodbill() {
+            var Random = Math.random();
+            var numberofPeople = output.length;
+            Random = Random * numberofPeople;
+            Random = Math.floor(Random);
+            return Random;
+        }
+        var RandomNumber = RandompayFoodbill();
+        var value = output[RandomNumber];
+        console.log(value + " Pay the bill!");
+    //or
+        /*
+        function whosPaying(names) {
+        
+    /
+        var numberOfPeople=names.length;
+        var randomPersonPostion = Math.floor(Math.random()*numberOfPeople);
+        var randomPerson = names[randomPersonPostion];
+       
+            return randomPerson + " is going to buy lunch today!" ;
+       
+    }
+        */
+    </script>
+</body>
+
+</html>

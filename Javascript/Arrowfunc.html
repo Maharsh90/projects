@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Arrow Function</title>
+</head>
+<body>
+     <div>
+     	This is Arrow function
+     </div>
+     <script type="text/javascript">
+     	function greet() {
+     		console.log("Good Mornings");
+     	}
+     	greet();
+
+     	//Arrow function
+     	let greet1 = ()=>
+        {
+     		console.log("Good night");
+       	}
+         greet1();
+
+        let sum = (a,b)=>{
+        	console.log("Sum:-" + (a+b));
+        } 
+        sum(10,2);
+
+        //you can also write in short form like in below
+
+        let mul = (a,b)=>a*b;
+
+        //another shortcut in when argument is only one and only
+
+        let half = a =>a/2;
+        //if no args then you cannot skip bracket.
+        let grant = () => console.log("Good evening");
+        grant();
+
+     	setTimeout(()=>{
+             console.log("Hello my name is maharsh");
+     	},3000);
+
+      //and if you use simple function then you cannot call parent object property like this.greetings inside the function
+       // let obj1={
+       // 	greetings:["Good Mornings"],
+       // 	name:["maharsh","Darshan","ravi","Manan"],
+       // 	speak1(){
+       // 	 name.greetings.forEach(function s(greetings,name){
+       // 			console.log(greetings + " kukdoo koo " +name);//you cannot use this.greetings
+       // 		});
+       // 	 }
+       	 
+       // }
+       // obj1.speak1();
+     
+       //if you are making this in the function then this scope will remain inside the function
+       
+       //if you are making this in the arrow function then scope will remain outside or you can say you can use parent property for using this inside the arrow function.
+       
+       //lexical this 
+       let obj2={
+       	greetings:"Good Mornings",
+       	name:["maharsh","Darshan","ravi","Manan"],
+       	speak2(){
+       		this.name.forEach((student)=>{
+       			console.log(this.greetings + " kukdoo koo " +student);
+       		});
+       	 }
+       	 
+       }
+       obj2.speak2();
+     </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>SetTimeOut</title>
+</head>
+<body>
+	<div class="container" id="time">
+		This is Time
+	</div>
+	<script type="text/javascript">
+		console.log("This is SetTimeOut and setInterval function");
+		// SetTimeout --> Allows us to run a function once after the interval of time
+		// clearTimeout --> Allows us to run a function repeatedly after the interval of time
+
+		function greet(name,byetext)
+		{
+			console.log("Good Morning" + name + " "+byetext);
+		}
+	    // setTimeout(greet,2000," Maharsh","Take care");
+	    //you cannot call any function in setTimeout 
+
+	    //clear timeout
+
+	    timeOut= setTimeout(greet,2000," Maharsh","Take care");
+            console.log(timeOut);
+	     clearTimeout(timeOut);//to clear timeout
+
+	     let intervalid=setInterval(greet,2000,"good Morning","Maharsh");
+	     console.log(intervalid);
+	     clearTimeout(intervalid);
+
+	     function displayTime()
+	     {
+	     	let time = new Date();
+            console.log(time);
+            document.getElementById('time').innerHTML = time;
+
+	     }
+	     // setInterval(displayTime,5000);
+
+	     //date and time in javascript
+
+	     let now = new Date();
+	     console.log(now);
+        // reference date
+	     let dt = new Date(0);
+	     console.log(dt);
+
+         let n = new Date("2021-2-15");
+         console.log(n);
+
+          // let q = new Date(year,month,date,hours,minutes,second,millisecond);
+          let newDate = new Date(3000,12,6,9,3,2,34)
+         console.log(newDate);
+
+         let yr = newDate.getFullYear();
+         console.log("The Year is ",yr);
+
+         let dat = newDate.getDate();
+         console.log("The date is ",dat);
+
+         let month = newDate.getMonth();
+         console.log("The month is ",month);
+
+         let hr = newDate.getHours();
+         console.log("The Year is ",hr);
+
+         newDate.setDate(23); //setDate(33) --auto correction
+         console.log(newDate);
+         //to return millisecond
+         let r=Date.now();
+         console.log(r);
+
+         newDate.setSeconds(23); //setDate(33) --auto correction
+         console.log(newDate);
+	</script>
+</body>
+</html>

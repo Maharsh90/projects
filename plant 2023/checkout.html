@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <style>
+        body{
+            background-color: lightyellow;
+        }
+        .container{
+            height: 122vh;
+            width: 100vw;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .cart-price{
+            margin-left: 140px;
+            color: grey;
+        }
+        .total-price{
+            color:black;
+            margin-left: 143px;
+        }
+        .money-price{
+            margin-left: 157px;
+        }
+        input{
+            width: 600px;
+            margin-bottom: 20px;
+            margin-right: 20px;
+        }
+        .firstname{
+            width: 285px;
+        }
+        .lastname{
+            width: 285px;
+        }
+        .flinput{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .flname{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        h3{
+            text-align: center;
+        }
+        .line{
+            width: 250px;
+            margin-bottom: 40px;
+            margin-left: 510px;
+            border: 1px solid darkgreen;
+        }
+        .radiopay{
+            width: 10px;
+            margin-right: 0px;
+        }
+        button{
+            width: 600px;
+        }
+        hr{
+            width: 600px;
+        }
+        .zip{
+            width: 200px;
+        }
+        .red{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h3>Checkout form</h3>
+    <hr class="line">
+    <div class="container">
+        <div class="first">
+        <h5>Shipping address</h5>
+        <p class="red">*fields are requrired</p>
+        <form>
+            <div class="flname">
+            <label>First name*</label>
+            <label>Last name*</label>
+            </div>
+            <div class="flinput">
+            <input type="text" class="firstname">
+            <input type="text" class="lastname">
+            </div>
+            <label>Email*</label>
+            <input type="email" placeholder="you@example.com">
+            <label>Mobile*</label>
+            <input type="number">
+            <label>Address*</label>
+            <input type="text" placeholder="1 2 3 4 Main St">
+            <label>Address2*</label>
+            <input type="text" placeholder="Apartment or suite">
+            <label>Zip*</label><br/>
+            <input type="number" class="zip">
+            <hr>
+            <h6>Payment</h6>
+            <input class="radiopay" type="radio" checked>
+            <label>Cash On Delivery</label><br/>
+            <input class="radiopay" type="radio">
+            <label>Paytm</label>
+            <hr>
+            <button type="button" class="btn btn-success">Continue to checkout</button>
+            
+        </form>
+        </div>
+        <div class="second">
+            <h4>Your cart</h4>
+            <div class="card" style="width: 18rem;">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Money      <span class="cart-price money-price">$ 299</span></li>
+                  <li class="list-group-item">Aloe vera  <span class="cart-price">$ 249</span></li>
+                  <li class="list-group-item">Total(Rs.) <span class="cart-price total-price">$ 548</span></li>
+                </ul>
+              </div>
+        </div>      
+            
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            margin-top: 30px;
+            height: 100vh;
+            width: 100vw;
+        }
+        img{
+            height: 200px;
+            width: 200px;
+            border-radius: 10%;
+        }
+        h2{
+            text-align: center;
+        }
+        hr{
+            width: 300px;
+            border: 1px solid black;
+        }
+        .flexCenter{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .grey{
+            color: gray;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    <h2>Best Selling Products</h2>
+    <hr>
+    <div class="container">
+        <div class="flexCenter">
+            <img src="./images/Rose.jpg" alt="Rose">
+            <p class="grey">Rose</p>
+            <p>$ 239</p>
+        </div>
+        <div class="flexCenter">
+            <img src="./images/CallaLily.jpg" alt="CallaLily">
+            <p class="grey">Rose</p>
+            <p>$ 1199</p>
+        </div>
+        <div class="flexCenter">
+            <img src="./images/Money.jpg" alt="money">
+            <p class="grey">Money</p>
+            <p>$ 299</p>
+        </div>
+        <div class="flexCenter">
+            <img src="./images/AloeVera.jpg" alt="aloevera">
+            <p class="grey">Aloe vera</p>
+            <p>$ 249</p>
+        </div>
+        <div class="flexCenter">
+            <img src="./images/Tulsi.jpg" alt="tulsi">
+            <p class="grey">Tulsi</p>
+            <p>$ 249</p>
+        </div>
+        <div class="flexCenter">
+            <img src="./images/Gudhal.jpg" alt="ghudhal">
+            <p class="grey">Ghudhal</p>
+            <p>$ 399</p>
+        </div>
+    </div>   
+</body>
+</html>
